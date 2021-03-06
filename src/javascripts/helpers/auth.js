@@ -1,6 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
-import boards from '../components/boards';
+import showBoards from '../components/boards';
 import home from '../components/home';
 import loginButton from '../components/loginButton';
 import logoutButton from '../components/logoutButton';
@@ -13,8 +13,9 @@ const checkLoginStatus = () => {
     if (user) {
       // person is logged in do something...
       navBar();
-      boards();
+      showBoards();
       logoutButton();
+      // console.warn(user.uid);
     } else {
       // person is NOT logged in
       navBar();

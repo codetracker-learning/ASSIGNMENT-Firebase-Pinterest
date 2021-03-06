@@ -1,8 +1,9 @@
-import logoutButton from '../components/loginButton';
+import logoutButton from '../components/logoutButton';
 import navBar from '../components/navBar';
 
-const startApp = () => {
+const startApp = (user) => {
   navBar(); // DYNAMICALLY ADD THE NAVBAR
+  console.warn(user);
   logoutButton(); // ADD THE LOGOUT BUTTON COMPONENT
 };
 

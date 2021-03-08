@@ -13,4 +13,11 @@ const getBoards = (uid) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-export default getBoards;
+// DELETE BOARD
+const deleteBoard = (firebaseKey, uid) => new Promise((resolve, reject) => {
+  axios.delete(`${dbUrl}/boards/${firebaseKey}.json`)
+    .then(() => getBoards(uid).then((boardArray) => resolve(boardArray)))
+    .catch((error) => reject(error));
+});
+
+export { getBoards, deleteBoard };

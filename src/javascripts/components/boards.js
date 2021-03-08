@@ -1,10 +1,10 @@
 const showBoards = (array) => {
   document.querySelector('#app').innerHTML = `
     <h1>Boards</h1>
-    <div id="boards-container" class="row justify-content-center"></div>`;
+    <div id="user-container" class="row justify-content-center"></div>`;
 
   array.forEach((item) => {
-    document.querySelector('#boards-container').innerHTML += `
+    document.querySelector('#user-container').innerHTML += `
     <div class="col-sm-6">
       <div class="card">
         <h5 class="card-title">${item.title}</h5>

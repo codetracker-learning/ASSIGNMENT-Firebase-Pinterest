@@ -1,6 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import showBoards from '../components/boards';
+import domEvents from '../components/events/domEvents';
 import home from '../components/home';
 import loginButton from '../components/loginButton';
 import logoutButton from '../components/logoutButton';
@@ -13,6 +14,7 @@ const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       // person is logged in do something...
+      domEvents(user.uid);
       navBar();
       getBoards(user.uid).then((boards) => showBoards(boards));
       logoutButton();

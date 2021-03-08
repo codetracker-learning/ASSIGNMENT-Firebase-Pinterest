@@ -1,4 +1,4 @@
-import getBoards from '../../helpers/data/boardData';
+import { getBoards, deleteBoard } from '../../helpers/data/boardData';
 import { getBoardsPins, deletePin } from '../../helpers/data/pinData';
 import showBoards from '../boards';
 import showPins from '../pins';
@@ -16,10 +16,17 @@ const domEvents = (user) => {
       getBoards(user).then((boards) => showBoards(boards));
     }
 
+    // CLICK EVENT FOR DELETING A BOARD
+    if (e.target.id.includes('delete-board')) {
+      const boardId = e.target.id.split('--')[1];
+      deleteBoard(boardId, user).then((boardsArray) => showBoards(boardsArray));
+    }
+
     // CLICK EVENT FOR DELETING A PIN
     if (e.target.id.includes('delete-pin')) {
       const firebaseKey = e.target.id.split('--')[1];
       deletePin(firebaseKey).then((pinsArray) => showPins(pinsArray));
+      // deletePin(firebaseKey).then((pinsArray) => showPins(pinsArray));
     }
   });
 };

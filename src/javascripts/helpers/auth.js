@@ -7,7 +7,7 @@ import loginButton from '../components/loginButton';
 import logoutButton from '../components/logoutButton';
 import navBar from '../components/navBar';
 import firebaseConfig from './apiKeys';
-import getBoards from './data/boardData';
+import { getBoards } from './data/boardData';
 
 const checkLoginStatus = () => {
   firebase.initializeApp(firebaseConfig);

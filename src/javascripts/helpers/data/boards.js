@@ -2,6 +2,8 @@
 import axios from 'axios';
 import firebaseConfig from '../apiKeys';
 
+let boardTitle = '';
+
 const dbUrl = firebaseConfig.databaseURL;
 
 const getBoards = (userId) => new Promise((resolve, reject) => {
@@ -29,7 +31,14 @@ const deleteBoard = (firebaseKey, userId) => new Promise((resolve, reject) => {
       .catch((error) => reject(error)));
 });
 
+const getBoardTitle = () => boardTitle;
+
+const setBoardTitle = (title) => {
+  boardTitle = title;
+};
+
 export {
   getBoards, getSingleBoard,
-  deleteBoard
+  deleteBoard,
+  getBoardTitle, setBoardTitle
 };

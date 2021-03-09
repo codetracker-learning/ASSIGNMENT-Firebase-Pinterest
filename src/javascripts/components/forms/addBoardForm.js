@@ -1,22 +1,19 @@
 // addBoardForm.js
 
-const addBoardForm = (userId, bookObject) => {
+const addBoardForm = (userId) => {
   document.querySelector('#modal-body').innerHTML = `
     <form id="edit-book-form" class="mb-4">
       <div class="form-group">
-        <label for="title">Board Title</label>
-        <input type="text" class="form-control" id="title" aria-describedby="bookTitle" placeholder="Enter Board Title">
+        <label for="board-title">Board Title</label>
+        <input type="text" class="form-control" id="board-title" aria-describedby="bookTitle" 
+          placeholder="Enter Board Title" value="">
       </div>
       <div class="form-group">
-        <label for="description">Description</label>
-        <input type="text" class="form-control" id="description" placeholder="Description" required>
+        <label for="board-description">Description</label>
+        <input type="text" class="form-control" id="board-description" 
+          placeholder="Enter a description" value="" required>
       </div>
-      <div class="form-group">
-        <label for="url">Url</label>
-        <input type="url" class="form-control" id="board-url" placeholder="Url of Site">
-      </div>
-      <button type="submit" id="add-board" class="btn btn-success">Add Board</button>
+      <button type="submit" id="add-board--${userId}" class="btn btn-success">Add Board</button>
     </form>`;
 };
-
 export default addBoardForm;

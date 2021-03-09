@@ -4,7 +4,7 @@ import { getBoards } from '../../helpers/data/boards';
 
 const selectBoard = (userId, pinObj) => {
   let selectStr = `<label for="board">Select a Board</label>
-    <select class="form-control" id="board" required>
+    <select class="form-control" id="pin-board" required>
     <option value="">Select a Board</option>`;
   getBoards(userId).then((boards) => {
     boards.forEach((board) => {
@@ -16,7 +16,8 @@ const selectBoard = (userId, pinObj) => {
       }
     });
     selectStr += '</select>';
-    document.querySelector('#select-board').innerHTML = selectStr;
+    document.querySelector('#pin-select-board').innerHTML = selectStr;
+    console.warn(document.querySelector('#pin-select-board').value);
   });
 };
 

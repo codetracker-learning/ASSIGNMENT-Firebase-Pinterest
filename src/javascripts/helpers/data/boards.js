@@ -2,8 +2,6 @@
 import axios from 'axios';
 import firebaseConfig from '../apiKeys';
 
-let boardTitle = '';
-
 const dbUrl = firebaseConfig.databaseURL;
 
 const getBoards = (userId) => new Promise((resolve, reject) => {
@@ -31,14 +29,26 @@ const deleteBoard = (firebaseKey, userId) => new Promise((resolve, reject) => {
       .catch((error) => reject(error)));
 });
 
-const getBoardTitle = () => boardTitle;
+const updateBoard = (userId, firebaseKey, boardObj) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/boards/${firebaseKey}.json`, boardObj)
+    .then(() => getBoards(userId).then((boardsArr) => resolve(boardsArr))
+      .catch((error) => reject(error)));
+});
 
-const setBoardTitle = (title) => {
-  boardTitle = title;
-};
+const addBoard = (userId, boardObj) => new Promise((resolve, reject) => {
+  axios.post(`${dbUrl}/boards.json`, boardObj)
+    .then((response) => {
+      const keyObj = { firebaseKey: response.data.name };
+      axios.patch(`${dbUrl}/boards/${response.data.name}.json`, keyObj)
+        .then(() => {
+          getBoards(userId).then((boardsArr) => resolve(boardsArr))
+            .catch((error) => reject(error));
+        });
+    });
+});
 
 export {
   getBoards, getSingleBoard,
-  deleteBoard,
-  getBoardTitle, setBoardTitle
+  deleteBoard, updateBoard,
+  addBoard
 };

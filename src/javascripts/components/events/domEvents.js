@@ -2,10 +2,11 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import { createBoard, getBoards } from '../../helpers/data/boardData';
 import deleteBoardPins from '../../helpers/data/boardPinsData';
-import { getBoardsPins, deletePin } from '../../helpers/data/pinData';
+import { getBoardsPins, deletePin, createPin } from '../../helpers/data/pinData';
 import showBoards from '../boards';
 import showPins from '../pins';
 import addBoardForm from './forms/addBoardForm';
+import addPinForm from './forms/addPinForm';
 
 const domEvents = (user) => {
   document.querySelector('body').addEventListener('click', (e) => {
@@ -49,6 +50,24 @@ const domEvents = (user) => {
       const firebaseKey = e.target.id.split('--')[1];
       deletePin(firebaseKey).then((pinsArray) => showPins(pinsArray));
       // deletePin(firebaseKey).then((pinsArray) => showPins(pinsArray));
+    }
+
+    // CLICK EVENT FOR SHOWING ADD-PIN FORM
+    if (e.target.id.includes('add-pin')) {
+      addPinForm();
+    }
+
+    // CLICK EVENT FOR SUBMITTING ADD-PIN FORM
+    if (e.target.id.includes('submit-pin')) {
+      e.preventDefault();
+      const pinObject = {
+        title: document.querySelector('#pin-title').value,
+        image: document.querySelector('#pin-image').value,
+        board_id: document.querySelector('#board').value,
+        user,
+      };
+
+      createPin(pinObject, user).then((pinsArray) => showPins(pinsArray));
     }
   });
 };

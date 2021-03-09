@@ -19,5 +19,15 @@ const deletePin = (firebaseKey, boardId) => new Promise((resolve, reject) => {
 });
 
 // CREATE PIN
+const createPin = (pinObject, uid) => new Promise((resolve, reject) => {
+  axios.post(`${dbUrl}/pins.json`, pinObject)
+    .then((response) => {
+      const body = { firebaseKey: response.data.name };
+      axios.patch(`${dbUrl}/pins/${response.data.name}.json`, body)
+        .then(() => {
+          getBoardsPins(uid).then((pinsArray) => resolve(pinsArray));
+        });
+    }).catch((error) => reject(error));
+});
 
-export { getBoardsPins, deletePin };
+export { getBoardsPins, deletePin, createPin };

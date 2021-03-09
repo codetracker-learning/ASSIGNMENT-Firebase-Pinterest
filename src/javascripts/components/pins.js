@@ -1,6 +1,7 @@
 const showPins = (array) => {
   // RESET USER-CONTAINER
   document.querySelector('#app').innerHTML = `
+  <button class="btn btn-success" id="add-pin">Add New Pin</button>
   <button class="btn btn-info" id="back-to-boards">Back To Boards</button>
   <h1>Pins</h1>
   <div id="user-container" class="row justify-content-center"></div>`;

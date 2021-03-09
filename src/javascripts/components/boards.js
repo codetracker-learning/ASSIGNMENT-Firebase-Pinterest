@@ -1,5 +1,6 @@
 const showBoards = (array) => {
   document.querySelector('#app').innerHTML = `
+  <button class="btn btn-success" id="add-board">Create New Board</button>
     <h1>Boards</h1>
     <div id="user-container" class="row justify-content-center"></div>`;
 

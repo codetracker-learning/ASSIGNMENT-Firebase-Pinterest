@@ -23,7 +23,7 @@ const createPin = (pinObject, uid) => new Promise((resolve, reject) => {
   axios.post(`${dbUrl}/pins.json`, pinObject)
     .then((response) => {
       const body = { firebaseKey: response.data.name };
-      axios.path(`${dbUrl}/pins/${response.data.name}.json`, body)
+      axios.patch(`${dbUrl}/pins/${response.data.name}.json`, body)
         .then(() => {
           getBoardsPins(uid).then((pinsArray) => resolve(pinsArray));
         });

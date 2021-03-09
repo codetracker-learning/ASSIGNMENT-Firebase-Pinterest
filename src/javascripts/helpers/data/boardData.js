@@ -1,4 +1,4 @@
-// import firebase from 'firebase/app';
+import firebase from 'firebase/app';
 import 'firebase/auth';
 import axios from 'axios';
 import firebaseConfig from '../apiKeys';
@@ -20,4 +20,16 @@ const deleteBoard = (firebaseKey, uid) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-export { getBoards, deleteBoard };
+// CREATE BOARD
+const createBoard = (boardObject) => new Promise((resolve, reject) => {
+  axios.post(`${dbUrl}/boards.json`, boardObject)
+    .then((response) => {
+      const body = { firebaseKey: response.data.name };
+      axios.patch(`${dbUrl}/boards/${response.data.name}.json`, body)
+        .then(() => {
+          getBoards(firebase.auth().currentUser.uid).then((boardArray) => resolve(boardArray));
+        });
+    }).catch((error) => reject(error));
+});
+
+export { getBoards, deleteBoard, createBoard };

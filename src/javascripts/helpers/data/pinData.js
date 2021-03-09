@@ -18,4 +18,6 @@ const deletePin = (firebaseKey, boardId) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
+// CREATE PIN
+
 export { getBoardsPins, deletePin };

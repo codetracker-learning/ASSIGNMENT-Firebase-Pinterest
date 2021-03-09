@@ -1,8 +1,11 @@
-import { getBoards } from '../../helpers/data/boardData';
-import deleteBoardPins from '../../helpers/data/boardPins';
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import { createBoard, getBoards } from '../../helpers/data/boardData';
+import deleteBoardPins from '../../helpers/data/boardPinsData';
 import { getBoardsPins, deletePin } from '../../helpers/data/pinData';
 import showBoards from '../boards';
 import showPins from '../pins';
+import addBoardForm from './forms/addBoardForm';
 
 const domEvents = (user) => {
   document.querySelector('body').addEventListener('click', (e) => {
@@ -21,6 +24,24 @@ const domEvents = (user) => {
     if (e.target.id.includes('delete-board')) {
       const boardId = e.target.id.split('--')[1];
       deleteBoardPins(boardId, user).then((boardsArray) => showBoards(boardsArray));
+    }
+
+    // CLICK EVENT FOR SHOWING ADD-BOARD FORM
+    if (e.target.id.includes('add-board')) {
+      addBoardForm();
+    }
+
+    // CLICK EVENT FOR SUBMITTING FORM FOR ADDING A BOARD
+    if (e.target.id.includes('submit-board')) {
+      e.preventDefault();
+      const boardObject = {
+        title: document.querySelector('#board-title').value,
+        time: new Date(),
+        image: document.querySelector('#board-image').value,
+        uid: firebase.auth().currentUser.uid,
+      };
+
+      createBoard(boardObject).then((boardArray) => showBoards(boardArray));
     }
 
     // CLICK EVENT FOR DELETING A PIN

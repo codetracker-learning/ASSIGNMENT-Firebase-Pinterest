@@ -15,6 +15,7 @@ const showPins = (array) => {
         <img class="card-img-top" src=${item.image} alt=${item.title} style="height: 400px;">
         <div class="card-body" style="height: 180px;">
           <hr>
+          <button class="btn btn-dark" id="edit-pin-btn--${item.firebaseKey}">Move Pin</button>
           <button class="btn btn-danger" id="delete-pin--${item.firebaseKey}">Remove Pin</button>
         </div>
       </div>

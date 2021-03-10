@@ -1,9 +1,26 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import 'vars';
 
 body {
   background-color: antiquewhite;
   color: brown;
   text-align: center;
   margin-top: 100px;
+}
+
+$letters:
+  "p" $p,
+  "i" $i,
+  "n" $n,
+  "t" $t,
+  "e" $e,
+  "r" $r,
+  "e2" $e2,
+  "s" $s;
+
+@each $letter, $hex in $letters {
+  .#{$letter}-nav {
+    color: $hex;
+  }
 }

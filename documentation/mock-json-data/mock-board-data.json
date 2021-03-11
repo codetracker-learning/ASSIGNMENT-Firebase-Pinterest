@@ -1,0 +1,42 @@
+{
+  "a": {
+    "firebaseKey":"a",
+    "title":"Music",
+    "image":"http://dummyimage.com/212x144.bmp/cc0000/ffffff"
+  },
+  "b": {
+    "firebaseKey":"b",
+    "title":"Art",
+    "image":"http://dummyimage.com/131x151.bmp/ff4444/ffffff"
+  },
+  "c": {
+    "firebaseKey":"c",
+    "title":"Food",
+    "image":"http://dummyimage.com/133x159.png/ff4444/ffffff"
+  },
+  "d": {
+    "firebaseKey":"d",
+    "title":"Travel",
+    "image":"http://dummyimage.com/208x177.bmp/ff4444/ffffff"
+  },
+  "e": {
+    "firebaseKey":"e",
+    "title":"Nature",
+    "image":"http://dummyimage.com/176x230.png/5fa2dd/ffffff"
+  },
+  "f": {
+    "firebaseKey":"f",
+    "title":"Architecture",
+    "image":"http://dummyimage.com/108x191.bmp/cc0000/ffffff"
+  },
+  "g": {
+    "firebaseKey":"g",
+    "title":"Movies",
+    "image":"http://dummyimage.com/191x174.png/ff4444/ffffff"
+  },
+  "h": {
+    "firebaseKey":"h",
+    "title":"Design",
+    "image":"http://dummyimage.com/175x177.png/ff4444/ffffff"
+  }
+}

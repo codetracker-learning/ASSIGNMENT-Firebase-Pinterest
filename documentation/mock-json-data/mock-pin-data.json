@@ -1,0 +1,115 @@
+{
+  "310": {
+    "firebaseKey":"310",
+    "board_id":"a",
+    "title":"White-browed owl",
+    "image":"http://dummyimage.com/101x197.bmp/5fa2dd/ffffff",
+    "favorite":false
+  },
+  "107": {
+    "firebaseKey":"107",
+    "board_id":"b",
+    "title":"Swallow-tail gull",
+    "image":"http://dummyimage.com/113x248.bmp/dddddd/000000",
+    "favorite":true
+  },
+  "635": {
+    "firebaseKey":"635",
+    "board_id":"c",
+    "title":"Brown hyena",
+    "image":"http://dummyimage.com/143x226.jpg/cc0000/ffffff",
+    "favorite":true
+  },
+  "899": {
+    "firebaseKey":"899",
+    "board_id":"d",
+    "title":"Black-backed magpie",
+    "image":"http://dummyimage.com/246x128.bmp/cc0000/ffffff",
+    "favorite":true
+  },
+  "449": {
+    "firebaseKey":
+    "449","board_id":
+    "e","title":"Great egret",
+    "image":"http://dummyimage.com/245x235.bmp/5fa2dd/ffffff",
+    "favorite":true
+  },
+  "681": {
+    "firebaseKey":"681",
+    "board_id":"f",
+    "title":"Shelduck, common",
+    "image":"http://dummyimage.com/167x126.png/dddddd/000000",
+    "favorite":true
+  },
+  "042": {
+    "firebaseKey":"042",
+    "board_id":"g",
+    "title":"Red-cheeked cordon bleu",
+    "image":"http://dummyimage.com/104x228.bmp/cc0000/ffffff",
+    "favorite":false
+  },
+  "490": {
+    "firebaseKey":"490",
+    "board_id":"h",
+    "title":"Bettong, brush-tailed",
+    "image":"http://dummyimage.com/212x139.bmp/5fa2dd/ffffff",
+    "favorite":true
+  },
+  "984": {
+    "firebaseKey":"984",
+    "board_id":"a",
+    "title":"Southern tamandua",
+    "image":"http://dummyimage.com/160x130.bmp/cc0000/ffffff",
+    "favorite":false
+  },
+  "645": {
+    "firebaseKey":"645",
+    "board_id":"b",
+    "title":"Yak",
+    "image":"http://dummyimage.com/117x187.png/ff4444/ffffff",
+    "favorite":true
+  },
+  "826": {
+    "firebaseKey":"826",
+    "board_id":"c",
+    "title":"Kelp gull",
+    "image":"http://dummyimage.com/232x112.png/ff4444/ffffff",
+    "favorite":true
+  },
+  "956": {
+    "firebaseKey":"956",
+    "board_id":"d",
+    "title":"Galapagos penguin",
+    "image":"http://dummyimage.com/216x185.jpg/ff4444/ffffff",
+    "favorite":true
+  },
+  "563": {
+    "firebaseKey":"563",
+    "board_id":"e",
+    "title":"Fox, grey",
+    "image":"http://dummyimage.com/173x166.png/ff4444/ffffff",
+    "favorite":false
+  },
+  "941": {
+    "firebaseKey":"941",
+    "board_id":"f",
+    "title":"Goliath heron",
+    "image":"http://dummyimage.com/222x136.bmp/cc0000/ffffff",
+    "favorite":false
+  },
+  "129": {
+    "firebaseKey":"129",
+    "board_id":"g",
+    "title":"Ocelot",
+    "image":"http://dummyimage.com/117x214.bmp/dddddd/000000",
+    "favorite":false
+  },
+  "264": {
+    "firebaseKey":"264",
+    "board_id":"h",
+    "title":
+    "Snail",
+    "image":"http://dummyimage.com/117x214.bmp/dddddd/000000",
+    "favorite":false
+  }
+}

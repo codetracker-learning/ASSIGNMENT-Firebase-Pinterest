@@ -2,8 +2,88 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
 body {
-  background-color: antiquewhite;
-  color: brown;
+  color: rgba(204,33,39,255);
   text-align: center;
   margin-top: 100px;
+  font-family: Helvetica, sans-serif;
+}
+
+nav {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  
+}
+
+.btn {
+  background-color: transparent;
+  color: black;
+  transition: background-color .001s;
+  font-size: 12pt;
+  height: 48px;
+  font-weight: bold;
+}
+
+#google-auth {
+  background-color: transparent;
+  color: black;
+  transition: background-color .001s;
+  font-size: 12pt;
+  height: 48px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+#google-auth:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+#corner-logo {
+  max-width: 50px;
+  max-height: 50px;
+  transition: background-color .001s;
+  padding: 10px;
+}
+
+#corner-logo:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+#boards-page {
+  background-color: black;
+  color: white;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  margin-right: auto;
+}
+
+.form-control {
+  background-color: rgb(240, 240, 240);
+  color: black;
+  transition: background-color .001s;
+  height: 48px;
+}
+
+.form-control:hover {
+  background-color: rgb(225, 225, 225);
+}
+
+#profile-icon {
+  width: 40px;
+  height: 40px;
+}
+
+#search-icon-image {
+  color: rgb(225, 225, 225);
 }

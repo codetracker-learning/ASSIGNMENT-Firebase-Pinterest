@@ -1,0 +1,50 @@
+{
+  "a": {
+    "firebaseKey":"a",
+    "title":"Music",
+    "image":"https://d49r1np2lhhxv.cloudfront.net/www/admin/uploads/images/Top15FestivalsUSA_EDCLasVegas.jpg",
+    "uid":"lCm3cKOe8PfTvIe1cgfzYiSGxdi1"
+  },
+  "b": {
+    "firebaseKey":"b",
+    "title":"Art",
+    "image":"https://d7hftxdivxxvm.cloudfront.net/?resize_to=width&src=https%3A%2F%2Fartsy-media-uploads.s3.amazonaws.com%2FEGn1GhF1OIeLcB1Im7kxOw%252Fmunch-scream-fade-lead.jpg&width=1200&quality=80",
+    "uid":"lCm3cKOe8PfTvIe1cgfzYiSGxdi1"
+  },
+  "c": {
+    "firebaseKey":"c",
+    "title":"Food",
+    "image":"https://countrybobs.com/wp-content/uploads/2020/03/beef-tacos.jpg",
+    "uid":"lCm3cKOe8PfTvIe1cgfzYiSGxdi1"
+  },
+  "d": {
+    "firebaseKey":"d",
+    "title":"Travel",
+    "image":"https://www.exp1.com/blog/wp-content/uploads/sites/7/2018/08/Golden-Gate-Bridge.jpg",
+    "uid":"lCm3cKOe8PfTvIe1cgfzYiSGxdi1"
+  },
+  "e": {
+    "firebaseKey":"e",
+    "title":"Nature",
+    "image":"https://www.newstatesman.com/sites/default/files/styles/lead_image/public/Longreads_2019/12/personal_story.jpg?itok=D8iYo9yy",
+    "uid":"lCm3cKOe8PfTvIe1cgfzYiSGxdi1"
+  },
+  "f": {
+    "firebaseKey":"f",
+    "title":"Architecture",
+    "image":"https://www.jamesmaherphotography.com/jamesmaherphotography/wp-content/uploads/2016/03/chrysler_building.jpg",
+    "uid":"lCm3cKOe8PfTvIe1cgfzYiSGxdi1"
+  },
+  "g": {
+    "firebaseKey":"g",
+    "title":"Movies",
+    "image":"https://i.pinimg.com/originals/8b/a4/30/8ba430a891e98636b50542874af2d004.jpg",
+    "uid":"lCm3cKOe8PfTvIe1cgfzYiSGxdi1"
+  },
+  "h": {
+    "firebaseKey":"h",
+    "title":"Design",
+    "image":"",
+    "uid":"lCm3cKOe8PfTvIe1cgfzYiSGxdi1"
+  }
+}

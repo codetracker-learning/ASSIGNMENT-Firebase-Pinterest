@@ -2,8 +2,204 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
 body {
-  background-color: antiquewhite;
-  color: brown;
+  background: url('https://scontent-bos3-1.xx.fbcdn.net/v/t1.6435-9/66585266_3072455329461171_6998459293968105472_n.png?_nc_cat=103&ccb=1-3&_nc_sid=973b4a&_nc_ohc=bRu4KI0MSrEAX-i5ux9&_nc_ht=scontent-bos3-1.xx&oh=7a76599bc20c16a0f8773cede663a66a&oe=60B71F3E');
+}
+
+.beforeNavbar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+}
+
+.beforeNavbar-brand img {
+  width: 2em;
+}
+
+.navbar {
+  justify-content: space-between;
+}
+.navbar-brand img {
+  width: 1.5em;
+}
+
+#showCreateBoardButton img {
+  width: 1.5em;
+}
+
+#showCreatePinButton img {
+  width: 1.5em;
+}
+
+#searchInput {
+  border-color: pink;
+  border-radius: 5px;
+}
+
+#searchButton {
+  border-color: pink;
+  background-color: pink;
+  border-radius: 5px;
+}
+
+#google-auth {
+  color: white;
+  border-color: red;
+  background-color: red;
+  border-radius: 5px;
+}
+
+#beforeAuthContent {
+  display: flex;
+  justify-content: center;
+  padding-top: 250px;
+}
+
+#beforeAuthContent h2 {
+  color: red;
+}
+
+#content {
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
   text-align: center;
-  margin-top: 100px;
+  margin: auto;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.card {
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.card-img-top {
+  height: 350px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.view-pins-btn {
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+}
+
+.delete-board-btn {
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+}
+
+h5 {
+  color: white;
+  background-color: pink;
+  border-radius: 5px;
+}
+
+#mainContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  justify-content: center;
+}
+
+#add-button {
+  display: flex;
+  justify-content: center;
+}
+
+#add-board-btn {
+  background-color: red;
+  img {
+    width: 2em;
+  }
+}
+
+#add-pin-btn {
+  background-color: red;
+  img {
+    width: 2em;
+  }
+}
+
+#profileContainer {
+  display: flex;
+  justify-content: center;
+   img {
+     border-radius: 100%;
+     width: 10em;
+     align-items: center;
+   }
+}
+
+h6 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  color: white;
+}
+
+#formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  justify-content: center;
+}
+
+#submit-board-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: white;
+  width: 50%;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.form-group {
+  width: 90%;
+}
+
+#submit-board {
+  background-color: pink;
+  color: white;
+  height: 2.5em;
+  width: 25%;
+}
+
+.delete-pin-btn {
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+}
+
+.update-pins-btn {
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+}
+
+#submit-pin-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: white;
+  width: 50%;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#submit-pin {
+  background-color: pink;
+  color: white;
+  height: 2.5em;
+  width: 25%;
 }
